@@ -41,7 +41,7 @@ function LessonPage() {
         setLessons(data);
 
         // ✅ Fetch user progress from backend using `username`
-        const progressResponse = await fetch(`http://localhost:3000/api/progress/${userId}/${levelFile}`);
+        const progressResponse = await fetch(`https://indic-backend.onrender.com/api/progress/${userId}/${levelFile}`);
         if (!progressResponse.ok) throw new Error("Failed to fetch progress");
         const progressData = await progressResponse.json();
 
@@ -70,7 +70,7 @@ function LessonPage() {
     try {
       const progressData = { userId, levelFile, lastLesson: lessonIndex };
       
-      await fetch("http://localhost:3000/api/progress", {  // Changed from 5000 to 3000
+      await fetch("https://indic-backend.onrender.com/api/progress", {  // Changed from 5000 to 3000
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(progressData),

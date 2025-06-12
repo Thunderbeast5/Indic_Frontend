@@ -97,7 +97,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/auth/me", {
+        const response = await axios.get("https://indic-backend.onrender.com/api/auth/me", {
           withCredentials: true, // ✅ Send cookies
         });
 
@@ -124,7 +124,7 @@ const HomePage = () => {
         // Fetch progress for each level
         for (const level of levels) {
           try {
-            const response = await fetch(`http://localhost:3000/api/progress/${currentUser.username}/${level.file}`);
+            const response = await fetch(`https://indic-backend.onrender.com/api/progress/${currentUser.username}/${level.file}`);
             if (response.ok) {
               const data = await response.json();
               // Save the progress data with the level id as the key

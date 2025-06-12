@@ -37,7 +37,7 @@ const Navbar = () => {
         // Fetch progress for each level
         for (const level of levels) {
           try {
-            const response = await fetch(`http://localhost:3000/api/progress/${user.username}/${level.file}`);
+            const response = await fetch(`https://indic-backend.onrender.com/api/progress/${user.username}/${level.file}`);
             if (response.ok) {
               const data = await response.json();
               

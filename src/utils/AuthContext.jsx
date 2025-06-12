@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/auth/verify`, {
+        const res = await axios.get(`https://indic-backend.onrender.com/api/auth/verify`, {
           withCredentials: true,
         });
         if (res.status === 200) {
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     // Optionally, call your logout API endpoint to clear the cookie
-    axios.get(`http://localhost:3000/api/auth/logout`, { withCredentials: true });
+    axios.get(`https://indic-backend.onrender.com/api/auth/logout`, { withCredentials: true });
   };
 
   return (
