@@ -325,7 +325,7 @@ const ChatDialogContent = ({ children, className }) => {
 };
 
 // Mac-optimized configuration
-const API_URL = 'http://127.0.0.1:5500'; // Use IP instead of localhost
+const API_URL = 'https://indic-python.onrender.com'; // Use IP instead of localhost
 
 const BOILERPLATE_MESSAGE = `
 Hello from INDIC! 🌟
